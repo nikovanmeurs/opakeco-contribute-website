@@ -1,0 +1,9 @@
+.List {
+    list-style-type: none;
+}
+
+.List--inline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
