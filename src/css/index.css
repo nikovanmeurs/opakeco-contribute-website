@@ -1,6 +1,7 @@
 @import './reset.css';
 @import './base.css';
 
+@import './components/Countdown.css';
 @import './components/Footer.css';
 @import './components/Heading.css';
 @import './components/Hero.css';
