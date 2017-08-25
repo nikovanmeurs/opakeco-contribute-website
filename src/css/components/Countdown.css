@@ -56,3 +56,9 @@
     letter-spacing: 1.75px;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 480px) {
+    .Countdown-value {
+        font-size: 21px;
+    }
+}

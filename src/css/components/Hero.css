@@ -40,3 +40,10 @@
     text-shadow: 0 0 8px rgba(0,0,0,0.65);
     line-height: 35px;
 }
+
+@media screen and (max-width: 480px) {
+    .Hero-tagline {
+        font-size: 21px;
+        line-height: auto;
+    }
+}
