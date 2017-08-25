@@ -33,12 +33,12 @@ init();
 function init() {
   reveal('.List-item');
 
-  if (targetDate.isAfter(moment())) {
+  if (moment().isAfter(targetDate)) {
       return;
   }
 
   countdownHolder.className = 'Countdown';
-  document.QuerySelector('.Hero').appendChild(countdownHolder);
+  document.querySelector('.Hero').appendChild(countdownHolder);
   
   handleTick();
   window.setInterval(handleTick, 1000);
@@ -56,7 +56,7 @@ function handlePressClick(event) {
 function handleTick() {
   const now = moment();
 
-  if (targetDate.isAfter(now)) {
+  if (now.isAfter(targetDate)) {
     window.clearInterval(handleTick);
     return;
   }
