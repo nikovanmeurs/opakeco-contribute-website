@@ -27,6 +27,22 @@
     margin-left: 21px;
 }
 
-.Footer-nav {
+@media screen and (max-width: 559px) {
+    .Footer-content {
+        flex-direction: column-reverse;
+    }
 
+    .Footer-link + .Footer-link {
+        margin-left: 0;
+    }
+
+    .Footer-copyright {
+        margin-top: 24px;
+    }
+
+    .Footer-link {
+        margin: 12px 0;
+        padding: 8px 0;
+        display: block;
+    }
 }
