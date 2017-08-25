@@ -7,269 +7,280 @@
 @import './components/Hero.css';
 @import './components/List.css';
 
+.List--featured {
+  align-items: flex-end;
+}
+
 .List--featured .List-item {
-    width: calc(50% - 20px);
-    min-width: 125px;
-    margin-left: 10px;
-    margin-right: 10px;
+  width: calc(50% - 20px);
+  min-width: 125px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .Featured-image {
-    width: 100%;
+  width: 100%;
 }
 
 .Subsection {
-    margin-top: 56px;
-    margin-bottom: 56px;
+  margin-top: 56px;
+  margin-bottom: 56px;
 }
 
 .Press-link {
-    font-weight: 700;
+  color: inherit;
+  font-weight: 700;
 }
 
 .Press-author {
-    margin-top: 10px;
-    color: #dfe2e3;
+  margin-top: 10px;
+  color: #dfe2e3;
 }
 
 .List--team,
 .List--featured,
 .List--press {
-    width: calc(100% + 20px);
-    margin-left: -10px;
+  width: calc(100% + 20px);
+  margin-left: -10px;
 }
 
 .List--team .List-item,
 .List--press .List-item {
-    width: calc(100% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
-    
-    position: relative;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+
+  position: relative;
 }
 
 .List--team .List-item {
-    background: #008080;
-    color: #eff0f1;
+  background: #008080;
+  color: #eff0f1;
 }
 
 .List--press .List-item {
-    background: #29432a;
-    color: #dfe2e3;
+  background: #29432a;
+  color: #dfe2e3;
+  cursor: pointer;
 }
 
 .List-itemBackground,
 .List-itemBackgroundOverlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .List-itemBackgroundOverlay {
-    background: #008080;
-    opacity: 0.8;
+  background: #008080;
+  opacity: 0.8;
 }
 
 .List--press .List-itemContent,
 .List--team .List-itemContent {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 12px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
 
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .List--press .List-item:before,
 .List--team .List-item:before {
-    content: " ";
-    display: block;
-    padding-top: 100%;
+  content: " ";
+  display: block;
+  padding-top: 100%;
 }
 
 .Press-link {
-    font-size: 21px;
+  font-size: 21px;
 }
 
 .Section {
-    width: 100%;
+  width: 100%;
 }
 
 .Section--contact {
-    background: #fff;
-    color: #4a4a4a;
+  background: #fff;
+  color: #4a4a4a;
 }
 
 .Section--mailing {
-    background: #eef5db;
-    color: #4a4a4a;
+  background: #eef5db;
+  color: #4a4a4a;
 }
 
 .Section--team {
-    background: #e7f3f3;
-    color: #1d2426;
+  background: #e7f3f3;
+  color: #1d2426;
 }
 
 .Section--intro .Section-action,
 .Section--contact .Section-action {
-    color: #008080;
+  color: #008080;
 }
 
 .Section--contact .Section-content {
-    padding-top: 56px;
-    padding-bottom: 56px;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .Section--intro {
-    background: #fff;
+  background: #fff;
 }
 
 .Section--intro .Section-heading {
-    color: #89c48c;
+  color: #89c48c;
 }
 
 .Hero-content,
 .Section--intro .Section-content,
 .Section--contact .Section-content,
 .Section--mailing .Section-content {
-    max-width: 820px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 820px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Section--news {
-    background: #6fb773;
-    color: #333b3b;
+  background: #6fb773;
+  color: #333b3b;
 }
 
 .Section-action {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .Section-action + .Section-action {
-    margin-left: 32px;
+  margin-left: 32px;
 }
 
 .Section-actions {
-    margin-top: 36px;
+  margin-top: 36px;
 }
 
 .Section-content {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 94px 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 94px 20px;
 }
 
 .Section-heading {
-    font-size: 36px;
-    margin-bottom: 22px;
+  font-size: 36px;
+  margin-bottom: 22px;
 }
 
 .Section-intro {
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 56px;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 56px;
 }
 
 .Video:before {
-    content: " ";
-    display: block;
-    padding-top: 56.25%;
+  content: " ";
+  display: block;
+  padding-top: 56.25%;
 }
 
 .Video {
-    margin: 36px 0;
-    position: relative;
+  margin: 36px 0;
+  position: relative;
 }
 
 .Video-content {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .email {
-    height: auto !important;
-    border-radius: 0 !important;
-    font-family: Raleway, Helvetica, Arial, sans-serif !important;
-    padding: 10px 13px !important;
-    font-size: 16px !important;
-    width: 100% !important;
-    max-width: 400px !important;
-    display: inline-block !important;
-    background: transparent !important;
-    border: 1px solid #4f6367 !important;
-    color: #4f6367 !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  font-family: Raleway, Helvetica, Arial, sans-serif !important;
+  padding: 10px 13px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  display: inline-block !important;
+  background: transparent !important;
+  border: 1px solid #4f6367 !important;
+  color: #4f6367 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .email {
+        max-width: 100% !important;
+    }
 }
 
 .Form {
-    margin-top: 36px;
+  margin-top: 36px;
 }
 
 .Team-name {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 21px;
-    letter-spacing: 1.75px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 1.75px;
 }
 
 .Team-description {
-    /* description: */
-    font-family: Raleway-Medium;
-    font-size: 16px;
-    letter-spacing: 1.33px;
+  /* description: */
+  font-family: Raleway-Medium;
+  font-size: 16px;
+  letter-spacing: 1.33px;
 }
 
 .email::placeholder {
-    font-family: Raleway, Helvetica, Arial, sans-serif !important;
-    font-size: 14px !important;
+  font-family: Raleway, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
 }
 
 .submit {
-    height: auto !important;
-    font-family: Raleway, Helvetica, Arial, sans-serif !important;
-    appearance: none !important;
-    background: #4f6367 !important;
-    border: 1px solid #4f6367 !important;
-    border-radius: 0 !important;
-    color: #fff !important;
-    display: inline-block !important;
-    padding: 11px 12px 10px !important;
-    font-weight: 700 !important;
-    /* Keep me informed: */
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    letter-spacing: 1.17px !important;
-    line-height: 18px !important;
+  height: auto !important;
+  font-family: Raleway, Helvetica, Arial, sans-serif !important;
+  appearance: none !important;
+  background: #4f6367 !important;
+  border: 1px solid #4f6367 !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  display: inline-block !important;
+  padding: 11px 12px 10px !important;
+  font-weight: 700 !important;
+  /* Keep me informed: */
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.17px !important;
+  line-height: 18px !important;
 }
 
+@media screen and (min-width: 580px) {
+  .List--press .List-item,
+  .List--team .List-item {
+    width: calc(50% - 20px);
+  }
 
-@media screen and (min-width:580px) {
-    .List--press .List-item,
-    .List--team .List-item {
-        width: calc(50% - 20px);
-    }
-
-    .List--featured .List-item {
-        width: calc(25% - 20px);
-    }
+  .List--featured .List-item {
+    width: calc(25% - 20px);
+  }
 }
 
-@media screen and (min-width:860px) {
-    .List--press .List-item,
-    .List--team .List-item {
-        width: calc(33.333333333333% - 20px);
-    }
+@media screen and (min-width: 860px) {
+  .List--press .List-item,
+  .List--team .List-item {
+    width: calc(33.333333333333% - 20px);
+  }
 
-    .List--featured .List-item {
-        width: calc(16.666666666667% - 20px);
-    }
+  .List--featured .List-item {
+    width: calc(16.666666666667% - 20px);
+  }
 }

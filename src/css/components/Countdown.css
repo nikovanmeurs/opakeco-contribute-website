@@ -28,6 +28,7 @@
 }
 
 .Countdown-value {
+    display: inline-block;
     font-weight: 100;
     font-size: 40px;
     color: #e8e8e8;
