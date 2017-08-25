@@ -22,12 +22,14 @@ import './img/team-nvmeurs.jpg';
 import './img/team-rammerlaan.jpg';
 
 import * as moment from 'moment';
+import * as ScrollReveal from 'scrollreveal';
 
 const $ = document.querySelector.bind(document);
 
 const targetDate = moment('2017-09-01T18:00:00Z');
 const countdownHolder = document.createElement('div');
 
+const { reveal } = ScrollReveal();
 init();
 
 function init() {
@@ -40,6 +42,8 @@ function init() {
   document
     .querySelectorAll('.List--press .List-item')
     .forEach(el => el.addEventListener('click', handlePressClick));
+
+    reveal('.List-item');
 }
 
 function handlePressClick(event) {
