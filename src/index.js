@@ -24,8 +24,6 @@ import './img/team-rammerlaan.jpg';
 import * as moment from 'moment';
 import * as ScrollReveal from 'scrollreveal';
 
-const $ = document.querySelector.bind(document);
-
 const targetDate = moment('2017-09-01T18:00:00Z');
 const countdownHolder = document.createElement('div');
 
@@ -33,17 +31,22 @@ const { reveal } = ScrollReveal();
 init();
 
 function init() {
+  reveal('.List-item');
+
+  if (targetDate.isAfter(moment())) {
+      return;
+  }
+
   countdownHolder.className = 'Countdown';
-
-  $('.Hero').appendChild(countdownHolder);
-
+  document.QuerySelector('.Hero').appendChild(countdownHolder);
+  
   handleTick();
   window.setInterval(handleTick, 1000);
   document
     .querySelectorAll('.List--press .List-item')
     .forEach(el => el.addEventListener('click', handlePressClick));
 
-    reveal('.List-item');
+    
 }
 
 function handlePressClick(event) {
@@ -52,6 +55,12 @@ function handlePressClick(event) {
 
 function handleTick() {
   const now = moment();
+
+  if (targetDate.isAfter(now)) {
+    window.clearInterval(handleTick);
+    return;
+  }
+
   const diff = moment.duration(targetDate.diff(now));
 
   countdownHolder.innerHTML = `
