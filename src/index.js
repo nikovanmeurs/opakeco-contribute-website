@@ -2,6 +2,8 @@ import './index.html';
 import './css/index.css';
 import './img/hero.jpg';
 import './img/found-ico.png';
+import './img/roadmap.svg';
+import './img/roadmap-wide.svg';
 
 import './img/logo-blockchainnews.png';
 import './img/logo-icochecker.png';
@@ -32,6 +34,7 @@ init();
 
 function init() {
   reveal('.List-item');
+  reveal('.Roadmap');
 
   if (moment().isAfter(targetDate)) {
       return;

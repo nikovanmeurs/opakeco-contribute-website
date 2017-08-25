@@ -1,0 +1,16 @@
+
+.Roadmap {
+    margin-top: 34px;
+}
+
+@media screen and (min-width: 789px) {
+    .Roadmap--narrow {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 788px) {
+    .Roadmap--wide {
+        display: none;
+    }
+}

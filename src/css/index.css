@@ -6,6 +6,7 @@
 @import './components/Heading.css';
 @import './components/Hero.css';
 @import './components/List.css';
+@import './components/Roadmap.css';
 
 .List--featured {
   align-items: flex-end;
@@ -113,6 +114,12 @@
 .Section--mailing {
   background: #eef5db;
   color: #4a4a4a;
+}
+
+.Section--roadmap {
+    background: #003b3b;
+    color: #fff;
+    text-align: center;
 }
 
 .Section--team {
