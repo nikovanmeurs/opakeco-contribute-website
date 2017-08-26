@@ -23,6 +23,10 @@
     color: #fff;
 }
 
+.Footer-link:hover {
+    color: #B0D7B2;
+}
+
 .Footer-link + .Footer-link {
     margin-left: 21px;
 }

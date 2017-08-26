@@ -127,9 +127,18 @@
   color: #1d2426;
 }
 
+.Section-action,
+.Footer-link {
+  transition: color ease-out 0.12s;
+}
+
 .Section--intro .Section-action,
 .Section--contact .Section-action {
   color: #008080;
+
+  &:hover {
+    color: #56aaaa;
+  }
 }
 
 .Section--contact .Section-content {
