@@ -62,7 +62,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .Countdown-separator,
     .Countdown-value {
         font-size: 21px;
+        font-weight: 500;
     }
 }
