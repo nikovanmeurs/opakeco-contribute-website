@@ -36,6 +36,10 @@
 }
 
 @media screen and (min-width: 711px) {
+    .Countdown-field:not(:first-child) {
+        margin-left: 8px;
+    }
+
     .Countdown-separator {
         display: none;
     }

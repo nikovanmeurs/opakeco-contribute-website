@@ -242,7 +242,7 @@
 
 .Team-description {
   /* description: */
-  font-family: Raleway-Medium;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 1.33px;
 }

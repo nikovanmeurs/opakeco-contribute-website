@@ -35,21 +35,21 @@ init();
 function init() {
   reveal('.List-item');
   reveal('.Roadmap');
-
+  
   if (moment().isAfter(targetDate)) {
-      return;
+    return;
   }
-
+  
   countdownHolder.className = 'Countdown';
   document.querySelector('.Hero').appendChild(countdownHolder);
   
   handleTick();
   window.setInterval(handleTick, 1000);
   document
-    .querySelectorAll('.List--press .List-item')
-    .forEach(el => el.addEventListener('click', handlePressClick));
-
-    
+  .querySelectorAll('.List--press .List-item')
+  .forEach(el => el.addEventListener('click', handlePressClick));
+  
+  
 }
 
 function handlePressClick(event) {
@@ -58,36 +58,40 @@ function handlePressClick(event) {
 
 function handleTick() {
   const now = moment();
-
+  
   if (now.isAfter(targetDate)) {
     window.clearInterval(handleTick);
     return;
   }
-
+  
   const diff = moment.duration(targetDate.diff(now));
-
+  
   countdownHolder.innerHTML = `
-        <div class="Countdown-content">
-            <span class="Countdown-field">
-                <span class="Countdown-value">${diff.days()}</span>
-                <span class="Countdown-unit">days</span>
-            </span>
-            <span class="Countdown-separator">:</span>
-            <span class="Countdown-field">
-                <span class="Countdown-value">${diff.hours()}</span>
-                <span class="Countdown-unit">hours</span>
-            </span>
-            <span class="Countdown-separator">:</span>
-            <span class="Countdown-field">
-                <span class="Countdown-value">${diff.minutes()}</span>
-                <span class="Countdown-unit">minutes</span>
-            </span>
-            <span class="Countdown-separator">:</span>
-            <span class="Countdown-field">
-                <span class="Countdown-value">${diff.seconds()}</span>
-                <span class="Countdown-unit">seconds</span>
-            </span>
-            <span class="Countdown-target">until ICO</span>
-        </div>
-    `;
+    <div class="Countdown-content">
+      <span class="Countdown-left">
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.days()}</span>
+          <span class="Countdown-unit">days</span>
+        </span>
+        <span class="Countdown-separator">:</span>
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.hours()}</span>
+          <span class="Countdown-unit">hours</span>
+        </span>
+        <span class="Countdown-separator">:</span>
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.minutes()}</span>
+          <span class="Countdown-unit">minutes</span>
+        </span>
+        <span class="Countdown-separator">:</span>
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.seconds()}</span>
+          <span class="Countdown-unit">seconds</span>
+        </span>
+      </span>
+      <span class="Countdown-right">
+        <span class="Countdown-target">until ICO</span>
+      </span>
+    </div>
+  `;
 }
