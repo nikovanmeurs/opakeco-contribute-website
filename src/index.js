@@ -46,14 +46,33 @@ function init() {
   handleTick();
   window.setInterval(handleTick, 1000);
   document
-  .querySelectorAll('.List--press .List-item')
-  .forEach(el => el.addEventListener('click', handlePressClick));
+    .querySelectorAll('.List--press .List-item')
+    .forEach(el => el.addEventListener('click', handlePressClick));
   
-  
+  const teamListItems = document.querySelectorAll('.List--team .List-item');
+  teamListItems.forEach(el => el.addEventListener('mouseover', handleTeamMouseOver));
+  teamListItems.forEach(el => el.addEventListener('mouseleave', handleTeamMouseLeave));
 }
 
 function handlePressClick(event) {
   event.currentTarget.querySelector('.Link').click();
+}
+
+function handleTeamMouseOver(event) {
+  const listItem = event.currentTarget;
+  const descriptionHeight = listItem.querySelector('.Team-description').clientHeight;
+
+  const content = listItem.querySelector('.List-itemContent');
+  content.style.transform = `translateY(${ descriptionHeight + 12 }px)`;
+
+  const overlay = listItem.querySelector('.List-itemBackgroundOverlay');
+  overlay.style.transform = 'translateY(calc(100% - 45px))';
+  overlay.style.opacity = '1.0';
+}
+
+function handleTeamMouseLeave(event) {
+  event.currentTarget.querySelector('.List-itemContent').style = null;
+  event.currentTarget.querySelector('.List-itemBackgroundOverlay').style = null;
 }
 
 function handleTick() {

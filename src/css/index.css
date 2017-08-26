@@ -52,6 +52,7 @@
   margin-right: 10px;
 
   position: relative;
+  overflow: hidden;
 }
 
 .List--team .List-item {
@@ -63,6 +64,11 @@
   background: #29432a;
   color: #dfe2e3;
   cursor: pointer;
+  transition: background-color 0.18s ease-out;
+
+  &:hover {
+    background: #3d643f;
+  }
 }
 
 .List-itemBackground,
@@ -76,6 +82,7 @@
 .List-itemBackgroundOverlay {
   background: #008080;
   opacity: 0.8;
+  transition: transform 0.12s ease-out;
 }
 
 .List--press .List-itemContent,
@@ -89,6 +96,7 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  transition: transform 0.12s ease-out;
 }
 
 .List--press .List-item:before,
@@ -129,7 +137,7 @@
 
 .Section-action,
 .Footer-link {
-  transition: color ease-out 0.12s;
+  transition: color 0.12s ease-out;
 }
 
 .Section--intro .Section-action,
