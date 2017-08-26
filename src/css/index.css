@@ -287,6 +287,19 @@
   line-height: 18px !important;
 }
 
+@media screen and (max-width: 640px) {
+
+  .Section-action + .Section-action {
+    margin-left: 0;
+  }
+
+  .Section-action {
+      margin: 12px 0;
+      padding: 8px 0;
+      display: block;
+  }
+}
+
 @media screen and (min-width: 580px) {
   .List--press .List-item,
   .List--team .List-item {
