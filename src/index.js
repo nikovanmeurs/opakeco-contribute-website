@@ -71,8 +71,11 @@ function handleTeamMouseOver(event) {
 }
 
 function handleTeamMouseLeave(event) {
-  event.currentTarget.querySelector('.List-itemContent').style = null;
-  event.currentTarget.querySelector('.List-itemBackgroundOverlay').style = null;
+  event.currentTarget.querySelector('.List-itemContent').style.transform = null;
+
+  const overlay = event.currentTarget.querySelector('.List-itemBackgroundOverlay');
+  overlay.style.opacity = null;
+  overlay.style.transform = null;
 }
 
 function handleTick() {
