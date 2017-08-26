@@ -3,6 +3,42 @@
     margin-top: 34px;
 }
 
+.Roadmap--narrow {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.Roadmap-svg {
+    width: 380px;
+    max-width: 100%;
+}
+
+.Roadmap-heading {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.49999952;
+    fill: #fff;
+}
+
+.Roadmap-separator {
+    fill: #fff;
+}
+
+.Roadmap-description,
+.Roadmap-timestamp {
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1.16666627px;
+}
+
+.Roadmap-timestamp {
+    fill: #D7D7D7;
+}
+
+.Roadmap-description {
+    fill: #ECECEC;
+}
+
 @media screen and (min-width: 789px) {
     .Roadmap--narrow {
         display: none;
