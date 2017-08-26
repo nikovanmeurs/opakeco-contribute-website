@@ -9,7 +9,7 @@
 @import './components/Roadmap.css';
 
 .List--featured {
-  align-items: flex-end;
+  align-items: center;
 }
 
 .List--featured .List-item {
