@@ -14,7 +14,6 @@
 
 .List--featured .List-item {
   width: calc(50% - 20px);
-  min-width: 125px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -314,10 +313,10 @@
 @media screen and (min-width: 860px) {
   .List--press .List-item,
   .List--team .List-item {
-    width: calc(33.333333333333% - 20px);
+    width: calc(100% / 3 - 20px);
   }
 
   .List--featured .List-item {
-    width: calc(16.666666666667% - 20px);
+    width: calc(100% / 6 - 20px);
   }
 }
