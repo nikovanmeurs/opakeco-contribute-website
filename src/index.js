@@ -90,32 +90,54 @@ function handleTick() {
   }
   
   const diff = moment.duration(targetDate.diff(now));
-  
+
+  const translations = {
+    'en': {
+      'days':    'days',
+      'hours':   'hours',
+      'minutes': 'minutes',
+      'seconds': 'seconds',
+      'until':   'until ICO',
+    },
+
+    'ko': {
+      'days':    '일',
+      'hours':   '시간',
+      'minutes': '분',
+      'seconds': '초',
+      'until':   'ICO 까지',
+    }
+  };
+
+  const detectLanguage = () => /^\/ko/.test(window.location.pathname) ? 'ko' : 'en';
+
+  const translated = key => translations[detectLanguage()][key];
+	
   countdownHolder.innerHTML = `
     <div class="Countdown-content">
       <span class="Countdown-left">
         <span class="Countdown-field">
           <span class="Countdown-value">${diff.days()}</span>
-          <span class="Countdown-unit">days</span>
+          <span class="Countdown-unit">${translated('days')}</span>
         </span>
         <span class="Countdown-separator">:</span>
         <span class="Countdown-field">
           <span class="Countdown-value">${diff.hours()}</span>
-          <span class="Countdown-unit">hours</span>
+          <span class="Countdown-unit">${translated('hours')}</span>
         </span>
         <span class="Countdown-separator">:</span>
         <span class="Countdown-field">
           <span class="Countdown-value">${diff.minutes()}</span>
-          <span class="Countdown-unit">minutes</span>
+          <span class="Countdown-unit">${translated('minutes')}</span>
         </span>
         <span class="Countdown-separator">:</span>
         <span class="Countdown-field">
           <span class="Countdown-value">${diff.seconds()}</span>
-          <span class="Countdown-unit">seconds</span>
+          <span class="Countdown-unit">${translated('seconds')}</span>
         </span>
       </span>
       <span class="Countdown-right">
-        <span class="Countdown-target">until ICO</span>
+        <span class="Countdown-target">${translated('until')}</span>
       </span>
     </div>
   `;
