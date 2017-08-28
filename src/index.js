@@ -109,9 +109,25 @@ function handleTick() {
     }
   };
 
-  const detectLanguage = () => /^\/ko/.test(window.location.pathname) ? 'ko' : 'en';
+  const detectLanguage = () => {
+    const maybeLanguageId = window.location.pathname.split('/')[1];
 
-  const translated = key => translations[detectLanguage()][key];
+    if (maybeLanguageId in translations) {
+      return maybeLanguageId;
+    }
+
+    return 'en';
+  };
+
+  const translated = (key) => {
+    const dictionary = translations[detectLanguage()];
+
+    if (key in dictionary) {
+      return dictionary[key];
+    }
+
+    return translations['en'][key];
+  };
 	
   countdownHolder.innerHTML = `
     <div class="Countdown-content">
