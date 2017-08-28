@@ -50,7 +50,7 @@ module.exports = {
             },
             {
                 include: [
-                    /index\.html$/,
+                    /\.html$/,
                     /robots\.txt$/,
                     /sitemap\.xml$/,
                 ],

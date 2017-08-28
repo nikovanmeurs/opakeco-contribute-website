@@ -320,3 +320,11 @@
     width: calc(100% / 6 - 20px);
   }
 }
+
+.u-english {
+  font-family: Raleway, Helvetica, Arial, sans-serif !important;
+}
+
+.u-korean {
+  font-family: 'Noto Sans KR', sans-serif !important;
+}
