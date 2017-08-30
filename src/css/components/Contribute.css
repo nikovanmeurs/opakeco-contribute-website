@@ -1,0 +1,41 @@
+.Contribute-section {
+    margin-left: -10px;
+    width: 100%;
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Contribute-sectionWrapper {
+    width: calc(100% + 20px);
+}
+
+@media screen and (max-width: 859px) {
+    .Contribute-section + .Contribute-section {
+        margin-top: 36px;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    .Contribute-section {
+        width: 50%;
+    }
+}
+
+.Contribute-title {
+    margin-top: 8px;
+    margin-bottom: 14px;
+
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 1.17px;
+}
+
+.Contribute-value {
+    background: rgba(255,255,255,0.15);
+    width: 100%;
+
+    padding: 9px 12px 8px;
+    margin-bottom: 22px;
+}

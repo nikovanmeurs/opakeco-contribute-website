@@ -1,0 +1,26 @@
+.Form-action {
+    padding: 9px 15px;
+
+    -webkit-appearance: none;
+    
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+}
+
+/* .Form-checkbox {
+    width: 17px;
+    height: 17px;
+    margin-right: 12px;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid #828282;
+
+    position: relative;
+
+    &:checked:after {
+        content: '<i class="material-icons">check</i>'
+        font-family: "Material Icons";
+    }
+} */

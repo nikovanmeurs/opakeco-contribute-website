@@ -1,8 +1,11 @@
 @import './reset.css';
 @import './base.css';
 
+@import './components/Contribute.css';
 @import './components/Countdown.css';
+@import './components/Flex.css';
 @import './components/Footer.css';
+@import './components/Form.css';
 @import './components/Heading.css';
 @import './components/Hero.css';
 @import './components/List.css';
@@ -116,6 +119,33 @@
 .Section--contact {
   background: #fff;
   color: #4a4a4a;
+}
+
+.Section--contribute {
+  background: #424242;
+  color: #f0f0f0;
+
+  & .Form-actions {
+    margin-top: 22px;
+  }
+
+  & .Form-action {
+    color: #424242;
+    background: #6fb773;
+
+    &:disabled {
+      background: #7e947f;
+    }
+  }
+
+  & .Link {
+    color: #6fb773;
+    font-weight: 700;
+  }
+
+  & .Section-heading {
+    color: #fff;
+  }
 }
 
 .Section--mailing {
@@ -327,4 +357,8 @@
 
 .u-korean {
   font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.u-bold {
+  font-weight: 700;
 }

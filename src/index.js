@@ -55,6 +55,49 @@ function init() {
   const teamListItems = document.querySelectorAll('.List--team .List-item');
   teamListItems.forEach(el => el.addEventListener('mouseover', handleTeamMouseOver));
   teamListItems.forEach(el => el.addEventListener('mouseleave', handleTeamMouseLeave));
+
+  document.querySelector('.Form-checkbox').addEventListener('change', handleCheckboxChange);
+}
+
+function handleCheckboxChange(event) {
+  if (event.target.checked) {
+    document.querySelector('.Form-action').disabled = false;
+    document.querySelector('.Form').addEventListener('submit', handleFormSubmit);
+  } else {
+    document.querySelector('.Form-action').disabled = true;
+    document.querySelector('.Form').removeEventListener('submit', handleFormSubmit);
+  }
+}
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  document.querySelector('.Section--contribute .Section-content').innerHTML = `
+    <h2 class="Heading Section-heading">Buying tokens</h2>
+    <div class="Contribute-sectionWrapper">
+      <div class="Contribute-section">
+        <p class="Text">Karmo tokens can be bought at a fixed rate of <span class="u-bold">1 ETH = 26.000 KRM</span>.</p>
+        <p class="Text">To buy tokens, send the necessary Ether ot the Opakeco wallet using the information on the side.</p>
+        <p class="Text">Are you ready to buy Karmo tokens but unsure of how to do so?</p>
+        <div class="Section-actions">
+          <a class="Link Section-action" href="" target="_blank">View the guide</a>
+        </div>
+      </div>
+      <div class="Contribute-section">
+        <div class="Contribute-field">
+          <div class="Contribute-title">Wallet address</div>
+          <div class="Contribute-value">0xA64863281953D190Cb9ccb7627F0042420a13c8f</div>
+        </div>
+        <div class="Contribute-field">
+          <div class="Contribute-title">Gas price</div>
+          <div class="Contribute-value">60 Gwei</div>
+        </div>
+        <div class="Contribute-field">
+          <div class="Contribute-title">Recommended gas limit</div>
+          <div class="Contribute-value">200.000</div>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function handlePressClick(event) {

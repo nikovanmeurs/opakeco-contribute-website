@@ -1,0 +1,13 @@
+.Flex {
+    display: flex;
+}
+
+.Flex--smColumn {
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1000px) {
+    .Flex--lgRow {
+        flex-direction: row;
+    }
+}
