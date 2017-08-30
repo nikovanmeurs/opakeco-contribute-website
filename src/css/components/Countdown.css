@@ -17,7 +17,7 @@
 .Countdown--started .Button {
     display: block;
     padding: 9px 15px;
-    background: #6fb773;
+    background: #fff;
     color: #000;
     font-weight: 600;
 }

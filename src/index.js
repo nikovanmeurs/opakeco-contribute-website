@@ -121,7 +121,7 @@ function handleFormSubmit(event) {
         <p class="Text">To buy tokens, send the necessary Ether ot the Opakeco wallet using the information on the side.</p>
         <p class="Text">Are you ready to buy Karmo tokens but unsure of how to do so?</p>
         <div class="Section-actions">
-          <a class="Link Section-action" href="" target="_blank">View the guide</a>
+          <a class="Button Section-action" href="" target="_blank">View walkthrough</a>
         </div>
       </div>
       <div class="Contribute-section">
@@ -186,6 +186,10 @@ function handleTick() {
         <span class="Countdown-right">
           <a class="Button" href="#contribute">Contribute now</a>
         </span>
+    `;
+
+    document.querySelector('.Section--contribute .Text').innerHTML = `
+      The contribution period is now live and it will end on the 8th of September 2017 at approximately 18:00 GMT, or when the hard cap has been reached. To contribute you must agree to our terms and click on “Contribute”.
     `;
 
     window.requestAnimationFrame(() => {
