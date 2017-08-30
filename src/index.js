@@ -117,7 +117,7 @@ function handleFormSubmit(event) {
     <h2 class="Heading Section-heading">Buying tokens</h2>
     <div class="Contribute-sectionWrapper">
       <div class="Contribute-section">
-        <p class="Text">Karmo tokens can be bought at a fixed rate of <span class="u-bold">1 ETH = 26.000 KRM</span>.</p>
+        <p class="Text">Karmo tokens can be bought at a fixed rate of <span class="u-bold">1 ETH = 30.000 KRM</span>.</p>
         <p class="Text">To buy tokens, send the necessary Ether ot the Opakeco wallet using the information on the side.</p>
         <p class="Text">Are you ready to buy Karmo tokens but unsure of how to do so?</p>
         <div class="Section-actions">
