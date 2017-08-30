@@ -138,6 +138,13 @@
     }
   }
 
+  & .Button {
+    padding: 9px 15px;
+    background: #6fb773;
+    color: #424242;
+    font-weight: 600;
+  }
+
   & .Link {
     color: #6fb773;
     font-weight: 700;
