@@ -29,8 +29,49 @@ import './img/team-rammerlaan.jpg';
 import * as moment from 'moment';
 import * as ScrollReveal from 'scrollreveal';
 
+require('smoothscroll-polyfill').polyfill();
+
 const targetDate = moment('2017-09-01T18:00:00Z');
 const countdownHolder = document.createElement('div');
+let countdownInterval;
+
+const translations = {
+  'en': {
+    'days':    'days',
+    'hours':   'hours',
+    'minutes': 'minutes',
+    'seconds': 'seconds',
+    'until':   'until ICO',
+  },
+
+  'ko': {
+    'days':    '일',
+    'hours':   '시간',
+    'minutes': '분',
+    'seconds': '초',
+    'until':   'ICO 까지',
+  }
+};
+
+const detectLanguage = () => {
+  const maybeLanguageId = window.location.pathname.split('/')[1];
+
+  if (maybeLanguageId in translations) {
+    return maybeLanguageId;
+  }
+
+  return 'en';
+};
+
+const translated = (key) => {
+  const dictionary = translations[detectLanguage()];
+
+  if (key in dictionary) {
+    return dictionary[key];
+  }
+
+  return translations['en'][key];
+};
 
 const { reveal } = ScrollReveal();
 init();
@@ -47,7 +88,8 @@ function init() {
   document.querySelector('.Hero').appendChild(countdownHolder);
   
   handleTick();
-  window.setInterval(handleTick, 1000);
+  countdownInterval = window.setInterval(handleTick, 1000);
+  
   document
     .querySelectorAll('.List--press .List-item')
     .forEach(el => el.addEventListener('click', handlePressClick));
@@ -85,11 +127,11 @@ function handleFormSubmit(event) {
       <div class="Contribute-section">
         <div class="Contribute-field">
           <div class="Contribute-title">Wallet address</div>
-          <div class="Contribute-value">0xA64863281953D190Cb9ccb7627F0042420a13c8f</div>
+          <div class="Contribute-value">tbd</div>
         </div>
         <div class="Contribute-field">
           <div class="Contribute-title">Gas price</div>
-          <div class="Contribute-value">60 Gwei</div>
+          <div class="Contribute-value">40 Gwei</div>
         </div>
         <div class="Contribute-field">
           <div class="Contribute-title">Recommended gas limit</div>
@@ -98,6 +140,13 @@ function handleFormSubmit(event) {
       </div>
     </div>
   `;
+}
+
+function handleContributeClick(event) {
+  event.preventDefault();
+  document.querySelector('.Section--contribute').scrollIntoView({ 
+    behavior: 'smooth' 
+  });
 }
 
 function handlePressClick(event) {
@@ -128,49 +177,26 @@ function handleTick() {
   const now = moment();
   
   if (now.isAfter(targetDate)) {
-    window.clearInterval(handleTick);
+    countdownInterval && window.clearInterval(countdownInterval);
+    countdownHolder.innerHTML = `
+      <div class="Countdown-content Countdown--started">
+        <span class="Countdown-left">
+          The ICO has started
+        </span>
+        <span class="Countdown-right">
+          <a class="Button" href="#contribute">Contribute now</a>
+        </span>
+    `;
+
+    window.requestAnimationFrame(() => {
+      document
+        .querySelector('.Countdown--started .Button')
+        .addEventListener('click', handleContributeClick);
+    })
     return;
   }
   
   const diff = moment.duration(targetDate.diff(now));
-
-  const translations = {
-    'en': {
-      'days':    'days',
-      'hours':   'hours',
-      'minutes': 'minutes',
-      'seconds': 'seconds',
-      'until':   'until ICO',
-    },
-
-    'ko': {
-      'days':    '일',
-      'hours':   '시간',
-      'minutes': '분',
-      'seconds': '초',
-      'until':   'ICO 까지',
-    }
-  };
-
-  const detectLanguage = () => {
-    const maybeLanguageId = window.location.pathname.split('/')[1];
-
-    if (maybeLanguageId in translations) {
-      return maybeLanguageId;
-    }
-
-    return 'en';
-  };
-
-  const translated = (key) => {
-    const dictionary = translations[detectLanguage()];
-
-    if (key in dictionary) {
-      return dictionary[key];
-    }
-
-    return translations['en'][key];
-  };
 	
   countdownHolder.innerHTML = `
     <div class="Countdown-content">

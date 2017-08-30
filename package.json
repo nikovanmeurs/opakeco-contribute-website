@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "moment": "^2.18.1",
-    "scrollreveal": "^3.3.6"
+    "scrollreveal": "^3.3.6",
+    "smoothscroll-polyfill": "^0.3.6"
   }
 }
