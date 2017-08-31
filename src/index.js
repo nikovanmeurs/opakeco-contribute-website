@@ -6,20 +6,24 @@ import './img/found-ico.png';
 import './img/roadmap.svg';
 import './img/roadmap-wide.svg';
 
+import './img/logo-avalon.png';
 import './img/logo-blockchainnews.png';
 import './img/logo-coingecko.png';
 import './img/logo-coinhills.png';
 import './img/logo-cryptocoinportal.png';
 import './img/logo-foundico.png';
+import './img/logo-hsb.png';
 import './img/logo-icochecker.png';
 import './img/logo-icocountdown.png';
 import './img/logo-icodaily.png';
 import './img/logo-icohoo.png';
 import './img/logo-icotracker.png';
+import './img/logo-slavefreetrade.png';
 import './img/logo-smithcrown.png';
 import './img/logo-startupjuncture.png';
 import './img/logo-tokenmarket.png';
 import './img/logo-urbancrypto.png';
+import './img/logo-villagebyvillage.png';
 
 import './img/team-akaramanlis.jpg';
 import './img/team-aparmesar.jpg';

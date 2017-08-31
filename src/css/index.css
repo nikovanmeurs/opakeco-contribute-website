@@ -11,16 +11,19 @@
 @import './components/List.css';
 @import './components/Roadmap.css';
 
+.List--partners,
 .List--featured {
   align-items: center;
 }
 
+.List--partners .List-item,
 .List--featured .List-item {
   width: calc(50% - 20px);
   margin-left: 10px;
   margin-right: 10px;
 }
 
+.Partners-image,
 .Featured-image {
   width: 100%;
 }
@@ -42,7 +45,8 @@
 
 .List--team,
 .List--featured,
-.List--press {
+.List--press,
+.List--partners {
   width: calc(100% + 20px);
   margin-left: -10px;
 }
@@ -55,6 +59,10 @@
 
   position: relative;
   overflow: hidden;
+}
+
+.List--partners .List-item {
+  margin-bottom: 22px;
 }
 
 .List--team .List-item {
@@ -160,6 +168,17 @@
   color: #4a4a4a;
 }
 
+.Section--partners {
+  background: #fff;
+  color: #29432a;
+  text-align: center;
+
+  & .Section-content {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
 .Section--roadmap {
     background: #003b3b;
     color: #fff;
@@ -236,6 +255,10 @@
 .Section-heading {
   font-size: 36px;
   margin-bottom: 22px;
+}
+
+.Section-heading--small {
+  font-size: 21px;
 }
 
 .Section-intro {
@@ -345,6 +368,10 @@
   .List--featured .List-item {
     width: calc(25% - 20px);
   }
+
+  .List--partners .List-item {
+    width: calc(25% - 20px);
+  }
 }
 
 @media screen and (min-width: 860px) {
@@ -356,6 +383,10 @@
   .List--featured .List-item {
     width: calc(100% / 6 - 20px);
   }
+
+  /* .List--partners .List-item {
+    width: calc(25% - 20px);
+  } */
 }
 
 .u-english {
