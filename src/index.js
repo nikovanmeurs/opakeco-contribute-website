@@ -117,7 +117,6 @@ function handleFormSubmit(event) {
         <p class="Text">To buy tokens, send the necessary Ether ot the Opakeco wallet using the information on the side.</p>
         <p class="Text">Are you ready to buy Karmo tokens but unsure of how to do so?</p>
         <div class="Section-actions">
-          <a class="Button Section-action" href="" target="_blank">View walkthrough</a>
         </div>
       </div>
       <div class="Contribute-section">
