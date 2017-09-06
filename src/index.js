@@ -80,10 +80,6 @@ function init() {
   reveal('.List-item');
   reveal('.Roadmap');
   
-  if (moment().isAfter(targetDate)) {
-    return;
-  }
-  
   countdownHolder.className = 'Countdown';
   document.querySelector('.Hero').appendChild(countdownHolder);
   
