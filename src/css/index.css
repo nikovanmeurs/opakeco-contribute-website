@@ -167,6 +167,13 @@
 .Section--mailing {
   background: #eef5db;
   color: #4a4a4a;
+
+  & .Button {
+    padding: 9px 15px;
+    background: #6fb773;
+    color: #424242;
+    font-weight: 600;
+  }
 }
 
 .Section--partners {
