@@ -14,7 +14,7 @@
     letter-spacing: 2px;
 }
 
-.Countdown--started .Button {
+.Button {
     display: block;
     padding: 9px 15px;
     background: #fff;

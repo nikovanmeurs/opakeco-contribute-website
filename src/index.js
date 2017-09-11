@@ -56,6 +56,7 @@ const translations = {
     'minutes':    'minutes',
     'seconds':    'seconds',
     'until':      'until ICO',
+    'pledge':     'pledge now',
     'buying':     'Buying tokens',
     'karmorate':  'Karmo tokens can be bought at a fixed rate of <span class="u-bold">1 ETH = 30.000 KRM</span>.',
     'tobuy':      'To buy tokens, send the necessary Ether ot the Opakeco wallet using the information on the side.',
@@ -75,6 +76,7 @@ const translations = {
     'minutes':    '분',
     'seconds':    '초',
     'until':      'ICO 까지',
+    'pledge':     'pledge now',
     'buying':     '토큰 구매',
     'karmorate':  '카르모 토큰은 <span class="u-bold">1이더리움당30,000 KRM의</span> 고정 비율로 구매 가능합니다.',
     'tobuy':      '토큰을 구매하려면 필요한 이더를 측면에 안내되어 있는 오파케코 지갑으로 보내세요.',
@@ -94,6 +96,7 @@ const translations = {
     'minutes':    'मिनट',
     'seconds':    'सेकंड',
     'until':      'आईसीओ तक',
+    'pledge':     'pledge now',
     'buying':     'टोकन ख़रीदना',
     'karmorate':  'कार्मो टोकन 1 ई<span class="u-bold">1 ईथ = 30.000 केआरएम</span> की एक निश्चित दर से खरीदा जा सकता है.',
     'tobuy':      'टोकन खरीदने के लिए, पक्ष के बारे में जानकारी का उपयोग करके ओपकेको वॉलेट के लिए आवश्यक ईथर ओटी भेजें।.',
@@ -286,7 +289,7 @@ function handleTick() {
         </span>
       </span>
       <span class="Countdown-right">
-        <span class="Countdown-target">${translated('until')}</span>
+      <a class="Button" href="https://docs.google.com/forms/d/e/1FAIpQLSe0f2fUOZws1j4yKErYTgEn96bLQT5d62zqKegw-acAcTE9hQ/viewform" target="_blank">${translated('pledge')}</a>
       </span>
     </div>
   `;
