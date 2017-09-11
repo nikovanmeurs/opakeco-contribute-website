@@ -7,6 +7,7 @@ import './img/found-ico.png';
 import './img/roadmap.svg';
 import './img/roadmap-wide.svg';
 
+import './img/logo.png';
 import './img/logo-avalon.png';
 import './img/logo-blockchainnews.png';
 import './img/logo-coingecko.png';
@@ -146,6 +147,20 @@ function init() {
   teamListItems.forEach(el => el.addEventListener('mouseleave', handleTeamMouseLeave));
 
   document.querySelector('.Form-checkbox').addEventListener('change', handleCheckboxChange);
+  window.addEventListener('click', handleWindowClick);
+  document.querySelector('.Masthead').addEventListener('click', handleMastheadClick);
+}
+
+function handleMastheadClick(event) {
+  event.stopPropagation();
+}
+
+function handleWindowClick(event) {
+  const toggle = document.querySelector('#toggle');
+
+  if (toggle.checked) {
+    toggle.checked = false;
+  }
 }
 
 function handleCheckboxChange(event) {

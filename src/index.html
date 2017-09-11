@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,18 +24,39 @@
     </script>
 </head>
 <body>
+    <header class="Page-masthead Masthead">
+        <div class="Masthead-contentWrapper">
+            <nav class="Masthead-content">
+                <input type="checkbox" id="toggle" class="Masthead-checkbox">
+                <div class="Masthead-main">
+                    <a href="/">
+                        <img src="/media/logo.png" alt="Opakeco logo" class="Masthead-logo">
+                    </a>
+                    <label for="toggle" class="Masthead-checkboxLabel">
+                        <span class="_vl2uoo">
+                            <i class="material-icons">menu</i>
+                        </span>
+                    </label>
+                    <div class="Masthead-actions">
+                        <a href="/" class="Masthead-action"><span>Home</span></a>
+                        <a href="//blog.opakeco.org" class="Masthead-action"><span>Blog</span></a>
+                    </div>
+                </div>
+                <div class="Masthead-actions">
+                    <a href="/" class="Masthead-action Link is-active">English</a>
+                    <span class="Masthead-languageSeparator">/</span>
+                    <a href="/ko" class="Masthead-action Link u-korean">한국어</a>
+                    <span class="Hero-languageSeparator">/</span>
+                    <a href="/hi" class="Masthead-action Link u-hindi">हिन्दी</a>
+                </div>
+            </nav>
+        </div>
+    </header>
     <main class="Main">
         <section class="Section Section--hero Hero">
             <div class="Hero-background">
                 <img src="/media/hero.jpg" class="Hero-backgroundImage" />
             </div>
-            <header class="Hero-languages">
-                <div class="Hero-languagesWrapper">
-                    <a href="/" class="Link is-active">English</a>
-                    <span class="Hero-languageSeparator">/</span>
-                    <a href="/ko" class="Link u-korean">한국어</a>
-                </div>
-            </header>
             <div class="Hero-contentOverlay">
                 <div class="Hero-content">
                     <h1 class="Heading Heading--primary">opakeco</h1>

@@ -9,6 +9,7 @@
 @import './components/Heading.css';
 @import './components/Hero.css';
 @import './components/List.css';
+@import './components/Masthead.css';
 @import './components/Roadmap.css';
 
 .List--partners,

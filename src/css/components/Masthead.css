@@ -1,0 +1,123 @@
+.Masthead {
+    width: 100%;
+    top: 0;
+    
+    position: fixed;
+    z-index: 10;
+
+    background: #6FB773;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+    line-height: 25px;
+}
+
+.Masthead-contentWrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Masthead-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Masthead-checkbox {
+    display: none;
+}
+
+.Masthead-checkboxLabel {
+    display: none;
+    color: #fff;
+}
+
+.Masthead-actions {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Masthead-action {
+    padding-top: 18px;
+    padding-right: 10px;
+    padding-bottom: 17px;
+    padding-left: 10px;
+
+    display: inline-block;
+
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+}
+
+.Masthead-action + .Masthead-action {
+    margin-left: 10px;
+}
+
+
+.Masthead-languages,
+.Masthead-languages .Masthead-action {
+    color: #f2f7f7;
+}
+
+.Masthead-languageSeparator {
+    color: #f2f7f7;
+    
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.Masthead-action.is-active {
+    font-weight: 700;
+}
+
+.Masthead-logo {
+    height: 26px;
+    width: 122;
+    margin-top: 18px;
+    margin-bottom: 16px;
+    margin-right: 20px;
+
+    vertical-align: top;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .Masthead-action {
+        display: block;
+        padding: 12px 0;
+    }
+    .Masthead-action + .Masthead-action {
+        margin-left: 0;
+    }
+
+    .Masthead-actions {
+        display: block;
+    }
+
+    .Masthead-checkboxLabel {
+        display: initial;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+    }
+
+    .Masthead-content {
+        flex-direction: column;
+        justify-content: initial;
+    }
+
+    .Masthead-checkbox:not(:checked) + .Masthead-main > .Masthead-actions,
+    .Masthead-checkbox:not(:checked) ~ .Masthead-actions {
+        display: none;
+    }
+
+    .Masthead-languageSeparator {
+        display: none;
+    }
+
+    .Masthead-main + .Masthead-actions {
+        margin-top: 12px;
+    }
+}
