@@ -31,6 +31,16 @@
     letter-spacing: 1.16666627px;
 }
 
+.Roadmap-description-hindi {
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1.49999952;
+}
+
+.Roadmap-description-hindi {
+    fill: #D7D7D7;
+}
+
 .Roadmap-timestamp {
     fill: #D7D7D7;
 }
