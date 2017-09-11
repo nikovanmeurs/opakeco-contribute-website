@@ -34,6 +34,7 @@ import './img/team-fboonman.jpg';
 import './img/team-imos.jpg';
 import './img/team-jxu.jpg';
 import './img/team-kbasten.jpg';
+import './img/team-lguillou.jpg';
 import './img/team-nvmeurs.jpg';
 import './img/team-rammerlaan.jpg';
 
