@@ -1,6 +1,9 @@
 import './index.html';
-import './ko.html';
-import './hi.html';
+import './ko/index.html';
+import './hi/index.html';
+import './the-opakeco-platform/for-charities.html';
+import './the-opakeco-platform/for-donors.html';
+import './the-opakeco-platform/for-investors.html';
 import './css/index.css';
 import './img/hero.jpg';
 import './img/found-ico.png';

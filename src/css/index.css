@@ -3,6 +3,7 @@
 
 @import './components/Contribute.css';
 @import './components/Countdown.css';
+@import './components/Dropdown.css';
 @import './components/Flex.css';
 @import './components/Footer.css';
 @import './components/Form.css';
@@ -392,6 +393,46 @@ Section--mailing .Button {
   } */
 }
 
+.Section--paleBlue {
+  background: #e7f3f3;
+  color:
+}
+
+.Section--paleBlue .Heading {
+  color: #333B3B;
+}
+
+.Section--paleBlue .Text {
+  color: #1D2426;
+}
+
+.Section--paleBlue .Button {
+  background: #424242;
+  color: #e7f3f3;
+}
+
+.Section--reasons .List {
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.Section--reasons .List-item {
+  margin-top: 56px;
+}
+
+.Section--reasons .Heading {
+  margin-bottom: 22px;
+}
+
+.Section--reasons .List-item {
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: calc(50% - 20px);
+}
+
 .u-english {
   font-family: Raleway, Helvetica, Arial, sans-serif !important;
 }
@@ -406,4 +447,8 @@ Section--mailing .Button {
 
 .u-bold {
   font-weight: 700;
+}
+
+.u-center {
+  text-align: center;
 }

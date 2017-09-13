@@ -103,6 +103,11 @@
         right: 18px;
     }
 
+    .Masthead-contentWrapper {
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+
     .Masthead-content {
         flex-direction: column;
         justify-content: initial;
