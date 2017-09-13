@@ -1,11 +1,12 @@
 import './index.html';
 import './ko/index.html';
 import './hi/index.html';
-import './the-opakeco-platform/for-charities.html';
-import './the-opakeco-platform/for-donors.html';
-import './the-opakeco-platform/for-investors.html';
+import './platform/for-charities.html';
+import './platform/for-donors.html';
+import './platform/for-investors.html';
 import './css/index.css';
 import './img/hero.jpg';
+import './img/hero-platform.jpg';
 import './img/found-ico.png';
 import './img/roadmap.svg';
 import './img/roadmap-wide.svg';

@@ -41,10 +41,36 @@
     line-height: 35px;
 }
 
+.Hero-contentBottom {
+    padding: 56px 0 56px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.65) 51%, rgba(0,0,0,0.35) 98%);
+}
+
+.Hero-contentBottom .Heading--primary {
+    font-size: 30px;
+    margin-bottom: 8px;
+    letter-spacing: 2.5px;
+}
+
+.Hero-contentBottom .Hero-tagline {
+    margin-bottom: 0;
+    
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.Hero-contentBottom .Hero-content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 @media screen and (max-width: 480px) {
     .Hero-tagline {
-        font-size: 21px;
-        line-height: auto;
+        font-size: 21px !important;
+        line-height: normal !important;
     }
 }
 

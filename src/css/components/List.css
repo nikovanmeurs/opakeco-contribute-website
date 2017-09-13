@@ -8,6 +8,29 @@
     flex-wrap: wrap;
 }
 
+.List--halves .List-item {
+    width: calc(50% - 20px);
+}
+
+.List--thirds .List-item {
+    width: calc(100% / 3 - 20px);
+}
+
 .List-item {
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .List--thirds .List-item {
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .List--halves .List-item {
+        width: 100% !important;
+    }
+    .List--thirds .List-item {
+        width: 100% !important;
+    }
 }

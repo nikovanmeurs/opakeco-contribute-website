@@ -56,7 +56,8 @@ module.exports = {
                 ],
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
+                    name: '[path][name].[ext]',
+                    outputPath: path => path.split('/').slice(1).join('/')
                 },
             },
             // "url" loader works just like "file" loader but it also embeds

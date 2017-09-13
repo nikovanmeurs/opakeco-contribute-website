@@ -411,6 +411,11 @@ Section--mailing .Button {
   color: #e7f3f3;
 }
 
+.Section--white {
+  background: #fff;
+}
+
+.Section--karmo .List,
 .Section--reasons .List {
   width: calc(100% + 20px);
   margin-left: -10px;
@@ -419,18 +424,27 @@ Section--mailing .Button {
   flex-flow: wrap;
 }
 
+.Section--karmo .List-item,
+.Section--reasons .List-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Section--karmo .List-item {
+  margin-top: 22px;
+}
+
 .Section--reasons .List-item {
   margin-top: 56px;
 }
 
+.Section--karmo .Heading,
 .Section--reasons .Heading {
   margin-bottom: 22px;
 }
 
-.Section--reasons .List-item {
-  margin-left: 10px;
-  margin-right: 10px;
-  max-width: calc(50% - 20px);
+.Section-intro {
+  margin-bottom: 56px;
 }
 
 .u-english {
@@ -451,4 +465,22 @@ Section--mailing .Button {
 
 .u-center {
   text-align: center;
+}
+
+.u-span8 {
+  width: calc(100% * 2 / 3 - 10px);
+}
+
+@media screen and (max-width: 1000px) {
+  .u-span8 {
+    width: inherit;
+  }
+}
+
+.u-mb22 {
+  margin-bottom: 22px;
+}
+
+.u-mb56 {
+  margin-bottom: 56px;
 }
