@@ -1,6 +1,6 @@
 import './index.html';
-import './ko/index.html';
-import './hi/index.html';
+import './ko.html';
+import './hi.html';
 import './platform/for-charities.html';
 import './platform/for-donors.html';
 import './platform/for-investors.html';

@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.Dropdown:hover {
+    background: inherit !important;
+}
+
 .Dropdown-icon {
     font-size: 21px;
     vertical-align: middle;
@@ -9,6 +13,7 @@
 
 .Dropdown-item {
     padding: 5px 9px 4px;
+    transition: background 0.12s ease-out;
 }
 
 .Dropdown-item.is-active {
@@ -31,6 +36,10 @@
         color: inherit;
     }
 
+    .Dropdown-item:hover {
+        background: #96ca99;
+    }
+
     .Dropdown-placeholder {
         padding-bottom: 9px;
     }
@@ -45,12 +54,8 @@
         color: #6FB773;
     }
 
-    .Dropdown-item:first-child {
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 9px;
-        margin-right: 9px;
-        border-top: 1px solid #C7DBC8;
+    .Dropdown-item:hover {
+        background: #d7ebd8;
     }
 
     .Dropdown-placeholder {

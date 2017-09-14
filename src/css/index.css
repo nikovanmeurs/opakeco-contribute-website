@@ -484,3 +484,21 @@ Section--mailing .Button {
 .u-mb56 {
   margin-bottom: 56px;
 }
+
+.submit {
+  height: auto !important;
+  font-family: Raleway, Helvetica, Arial, sans-serif !important;
+  appearance: none !important;
+  background: #4f6367 !important;
+  border: 1px solid #4f6367 !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+  display: inline-block !important;
+  padding: 11px 12px 10px !important;
+  font-weight: 700 !important;
+  /* Keep me informed: */
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.17px !important;
+  line-height: 18px !important;
+}
