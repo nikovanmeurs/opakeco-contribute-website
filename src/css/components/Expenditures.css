@@ -1,0 +1,62 @@
+.Expenditures {
+    display: flex;
+    flex-direction: row;
+}
+
+.Expenditures .Section--left {
+    width: calc(7/12 * 100% - 10px);
+    margin-right: 10px;
+}
+
+.Expenditures .Section--right {
+    margin-top: 64px;
+    margin-left: 10px;
+    width: calc(5/12 * 100% - 10px);
+}
+
+@media screen and (max-width: 800px) {
+
+    .Expenditures .Section--left {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .Expenditures .Section--right {
+       display: none;
+    }
+}
+
+.Expenditures-item {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.Expenditures-amount {
+    width: 60px;
+    padding: 6px;
+    margin-right: 12px;
+
+    display: inline-block;
+
+    text-align: right;
+}
+
+.Expenditures-item:nth-child(1) .Expenditures-amount {
+    background: #56B963;
+}
+
+.Expenditures-item:nth-child(2) .Expenditures-amount {
+    background: #78C782;
+}
+
+.Expenditures-item:nth-child(3) .Expenditures-amount {
+    background: #99DD9F;
+}
+
+.Expenditures-item:nth-child(4) .Expenditures-amount {
+    background: #BBE3C1;
+}
+
+.Expenditures-label {
+    color: #4C4C4C;
+}

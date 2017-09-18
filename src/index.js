@@ -10,6 +10,7 @@ import './img/hero-platform.jpg';
 import './img/found-ico.png';
 import './img/roadmap.svg';
 import './img/roadmap-wide.svg';
+import './img/pie.svg';
 
 import './img/logo.png';
 import './img/logo-avalon.png';
