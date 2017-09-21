@@ -65,7 +65,7 @@ const translations = {
     'pledge':     'pledge now',
     'buying':     'Buying tokens',
     'karmorate':  'Karmo tokens can be bought at a fixed rate of <span class="u-bold">1 ETH = 30.000 KRM</span>.',
-    'tobuy':      'To buy tokens, send the necessary Ether ot the Opakeco wallet using the information on the side.',
+    'tobuy':      'To buy tokens, send the necessary Ether to the Opakeco wallet using the information on the side.',
     'howto':      'Are you ready to buy Karmo tokens but unsure of how to do so?',
     'walkthrough': 'View walkthrough',
     'walletaddr': 'Wallet address',
