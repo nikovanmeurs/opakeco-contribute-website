@@ -27,6 +27,7 @@ import './img/logo-icohoo.png';
 import './img/logo-icotracker.png';
 import './img/logo-slavefreetrade.png';
 import './img/logo-smithcrown.png';
+import './img/logo-soma.png';
 import './img/logo-startupjuncture.png';
 import './img/logo-tokenmarket.png';
 import './img/logo-urbancrypto.png';
