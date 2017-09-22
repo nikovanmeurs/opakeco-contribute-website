@@ -57,7 +57,7 @@ const translations = {
   'en': {
     'started':    'The ICO has started',
     'contribute': 'Contribute now',
-    'live':       'The contribution period is now live and it will end on the 29th of September 2017 at approximately 18:00 GMT, or when the hard cap has been reached. To contribute you must agree to our terms and click on “Contribute”.',
+    'live':       'The contribution period is now live and it will end on the 30th of September 2017 at approximately 18:00 GMT, or when the hard cap has been reached. To contribute you must agree to our terms and click on “Contribute”.',
     'days':       'days',
     'hours':      'hours',
     'minutes':    'minutes',
@@ -77,7 +77,7 @@ const translations = {
   'ko': {
     'started':    'ICO가 시작되었습니다',
     'contribute': '투자 참여',
-    'live':       '투자가 현재 진행중이며 2017년 9월 29일 GMT 기준 약 18:00에 종료되거나 하드캡 목표치에 이르게 되면 투자가 종료됩니다.',
+    'live':       '투자가 현재 진행중이며 2017년 9월 30일 GMT 기준 약 18:00에 종료되거나 하드캡 목표치에 이르게 되면 투자가 종료됩니다.',
     'days':       '일',
     'hours':      '시간',
     'minutes':    '분',
@@ -97,7 +97,7 @@ const translations = {
   'hi': {
     'started':    'आईसीओ शुरू कर दिया है',
     'contribute': 'अब योगदान करें',
-    'live':       'योगदान की अवधि अब जी रही है और यह 28 सितम्ब9 2017 को लगभग 18:00 जीएमटी, या जब हार्ड कैप तक पहुंच गया है, समाप्त हो जाएगा।.',
+    'live':       'योगदान की अवधि अब जी रही है और यह 28 सितम्30 2017 को लगभग 18:00 जीएमटी, या जब हार्ड कैप तक पहुंच गया है, समाप्त हो जाएगा।.',
     'days':       'दिन',
     'hours':      'घंटे',
     'minutes':    'मिनट',
