@@ -503,3 +503,29 @@ Section--mailing .Button {
   letter-spacing: 1.17px !important;
   line-height: 18px !important;
 }
+
+.Section--black {
+  color: #FFF;
+  background: #000;
+}
+
+.Delay {
+  margin-top: -75px;
+  z-index: 10;
+}
+
+.Delay .Section-content {
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.Delay .Heading {
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.Delay .Text {
+  color: #fcfcfc;
+}
