@@ -70,7 +70,7 @@ const translations = {
     'howto':      'Are you ready to buy Karmo tokens but unsure of how to do so?',
     'walkthrough': 'View walkthrough',
     'walletaddr': 'Wallet address',
-    'gasprice':   'Gas price',
+    'gasprice':   'Recommended gas price',
     'gaslimit':   'Recommended gas limit',
   },
 
@@ -199,7 +199,7 @@ function handleFormSubmit(event) {
       <div class="Contribute-section">
         <div class="Contribute-field">
           <div class="Contribute-title">${translated('walletaddr')}</div>
-          <div class="Contribute-value">tbd</div>
+          <div class="Contribute-value">0xa4693ed25ce167e0ac3cefcb3d5c8a844b74cc78</div>
         </div>
         <div class="Contribute-field">
           <div class="Contribute-title">${translated('gasprice')}</div>
