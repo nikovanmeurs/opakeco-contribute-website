@@ -49,6 +49,10 @@ import * as ScrollReveal from 'scrollreveal';
 
 require('smoothscroll-polyfill').polyfill();
 
+const targetDate = moment('2017-09-21T18:00:00Z');
+const countdownHolder = document.createElement('div');
+let countdownInterval;
+
 const translations = {
   'en': {
     'started':    'The ICO has started',
@@ -137,6 +141,12 @@ init();
 function init() {
   reveal('.List-item');
   reveal('.Roadmap');
+  
+  countdownHolder.className = 'Countdown';
+  document.querySelector('.Hero').appendChild(countdownHolder);
+  
+  handleTick();
+  countdownInterval = window.setInterval(handleTick, 1000);
   
   document
     .querySelectorAll('.List--press .List-item')
@@ -233,4 +243,61 @@ function handleTeamMouseLeave(event) {
   const overlay = event.currentTarget.querySelector('.List-itemBackgroundOverlay');
   overlay.style.opacity = null;
   overlay.style.transform = null;
+}
+
+function handleTick() {
+  const now = moment();
+  
+  if (now.isAfter(targetDate)) {
+    countdownInterval && window.clearInterval(countdownInterval);
+    countdownHolder.innerHTML = `
+      <div class="Countdown-content Countdown--started">
+        <span class="Countdown-left">
+          ${translated('started')}
+        </span>
+        <span class="Countdown-right">
+          <a class="Button" href="#contribute">${translated('contribute')}</a>
+        </span>
+    `;
+
+    document.querySelector('.Section--contribute .Text').innerHTML = translated('live')
+
+    window.requestAnimationFrame(() => {
+      document
+        .querySelector('.Countdown--started .Button')
+        .addEventListener('click', handleContributeClick);
+    })
+    return;
+  }
+  
+  const diff = moment.duration(targetDate.diff(now));
+	
+  countdownHolder.innerHTML = `
+    <div class="Countdown-content">
+      <span class="Countdown-left">
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.days()}</span>
+          <span class="Countdown-unit">${translated('days')}</span>
+        </span>
+        <span class="Countdown-separator">:</span>
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.hours()}</span>
+          <span class="Countdown-unit">${translated('hours')}</span>
+        </span>
+        <span class="Countdown-separator">:</span>
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.minutes()}</span>
+          <span class="Countdown-unit">${translated('minutes')}</span>
+        </span>
+        <span class="Countdown-separator">:</span>
+        <span class="Countdown-field">
+          <span class="Countdown-value">${diff.seconds()}</span>
+          <span class="Countdown-unit">${translated('seconds')}</span>
+        </span>
+      </span>
+      <span class="Countdown-right">
+      <a class="Button" href="https://docs.google.com/forms/d/e/1FAIpQLSe0f2fUOZws1j4yKErYTgEn96bLQT5d62zqKegw-acAcTE9hQ/viewform" target="_blank">${translated('pledge')}</a>
+      </span>
+    </div>
+  `;
 }
