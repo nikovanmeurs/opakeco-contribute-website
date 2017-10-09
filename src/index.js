@@ -55,6 +55,7 @@ let countdownInterval;
 
 const translations = {
   'en': {
+    'failure':    'Soft cap not reached, refund started',
     'started':    'The ICO has started',
     'contribute': 'Contribute now',
     'live':       'The contribution period is now live and it will end on the 30th of September 2017 at approximately 18:00 GMT, or when the hard cap has been reached. To contribute you must agree to our terms and click on “Contribute”.',
@@ -75,6 +76,7 @@ const translations = {
   },
 
   'ko': {
+    'failure':    'Soft cap not reached, refund started',
     'started':    'ICO가 시작되었습니다',
     'contribute': '투자 참여',
     'live':       '투자가 현재 진행중이며 2017년 9월 30일 GMT 기준 약 18:00에 종료되거나 하드캡 목표치에 이르게 되면 투자가 종료됩니다.',
@@ -95,6 +97,7 @@ const translations = {
   },
 
   'hi': {
+    'failure':    'Soft cap not reached, refund started',
     'started':    'आईसीओ शुरू कर दिया है',
     'contribute': 'अब योगदान करें',
     'live':       'योगदान की अवधि अब जी रही है और यह 28 सितम्30 2017 को लगभग 18:00 जीएमटी, या जब हार्ड कैप तक पहुंच गया है, समाप्त हो जाएगा।.',
@@ -253,10 +256,7 @@ function handleTick() {
     countdownHolder.innerHTML = `
       <div class="Countdown-content Countdown--started">
         <span class="Countdown-left">
-          ${translated('started')}
-        </span>
-        <span class="Countdown-right">
-          <a class="Button" href="#contribute">${translated('contribute')}</a>
+          ${translated('failure')}
         </span>
     `;
 
